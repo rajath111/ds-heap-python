@@ -1,19 +1,6 @@
-'''
-    So, we already know how heap works.
-    Insertion and Retriving root.
-
-    If we represent complete binary tree, then:
-    For any i: its children are i * 2 + 1, i * 2 + 2
-
-    For any i: its parent is (i - 1) / 2
-
-    For root node: the parent will be -1.
-    For last node: last occupied index in the array
-'''
-
 from typing import Any
 
-class MinHeapListImpl:
+class MinHeap:
     '''
         So the value of any node will be less than their children.
     '''

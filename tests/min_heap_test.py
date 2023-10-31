@@ -1,10 +1,10 @@
 import sys
 import os
 sys.path.append(os.path.sep.join(__file__.split(os.path.sep)[:-2]))
-from src.min_heap import MinHeapListImpl
+from src.min_heap import MinHeap
 
 def common_test():
-    heap = MinHeapListImpl()
+    heap = MinHeap()
 
     heap.insert(10)
     heap.insert(30)
@@ -22,12 +22,12 @@ def common_test():
 
 
 def border_test():
-    heap = MinHeapListImpl()
+    heap = MinHeap()
 
     heap.insert(10000)
     assert heap.get_min() == 10000
 
 
 def empty_test():
-    heap = MinHeapListImpl()
+    heap = MinHeap()
     assert heap.get_min()

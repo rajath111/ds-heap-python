@@ -33,14 +33,33 @@ parent -> (i - 1) / 2
 4. If the value is greater than any of its children, swap with the smallest child, Do this recursively.
 
 
-## Implementation of Heap using Complete Binary Tree
+## Test the result
+I have added tests for both MinHeap and MaxHeap. 
+Run below command from root folder to execute the tests:
+```
+python tests\test_runner.py
+```
 
-In case of insertion and deletion, the binary tree gets adjusted with swaps.
+Or you can import the classes and test them. Also use them.
 
-    1
+## Extra things learnt while doing this implementation
+1. Importing python module from different folder
+   ```
+    import sys
+    import os
+    sys.path.append(os.path.sep.join(__file__.split(os.path.sep)[:-2]))
+    from src.min_heap import MinHeap
+   ```
 
-    2               3
 
-    4       5
+2. Load python module from file - Runtime
+   ```
+    from types import FunctionType, ModuleType
+    from os import path, listdir
+    from importlib.util import spec_from_file_location, module_from_spec
 
-    # I need previous level last element and last level first element
+    module_name = module_path.split(path.sep)[-1][:-3]  # Provide a custom name for the module
+    spec = spec_from_file_location(module_name, module_path)
+    custom_module = module_from_spec(spec)
+    spec.loader.exec_module(custom_module)
+   ```
