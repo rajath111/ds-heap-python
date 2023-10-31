@@ -8,7 +8,7 @@ There are two variants of heap.
     2. Max Heap - Returns max value from the container
 
 
-Lets consider Min heap for explanation,
+Lets consider Min heap for explanation, implementation of max heap is almost same as Min heap.
 At any node, both children values will be greater than or equal to the current node value.
 
 ## Implementation of Min heap using List/Array
