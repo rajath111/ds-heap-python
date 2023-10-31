@@ -1,4 +1,4 @@
-# Heap Data structure using List and Tree
+# Heap Data structure using List
 
 Heap is a data structure which returns maximum / minimum value from collection of data on O(log n). Average time complexity of both insertion and retrival is O(log n).  
 There are two variants of heap.
