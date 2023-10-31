@@ -1,6 +1,4 @@
-from src.binary_node import Node
 from src.max_heap import MaxHeap
-
 
 if __name__ == '__main__':
     # Using Max heap to sort array in descending order
@@ -12,9 +10,11 @@ if __name__ == '__main__':
     heap.insert(100)
     heap.insert(12)
     heap.insert(200)
-    print('started')
     while True:
-        print(heap.get_max(), end=' ')
+        try:
+            print(heap.get_max(), end=' ')
+        except:
+            break
 
 
 

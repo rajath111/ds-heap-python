@@ -1,27 +1,7 @@
 from typing import Any
-from src.binary_node import Node
+from src.heap_base import HeapBase
 
-class MaxHeap:
-
-    def __init__(self) -> None:
-        self._list = []
-        self._last = -1
-
-    
-    def _left(self, i: int) -> int:
-        return (i * 2) + 1
-
-    def _right(self, i) -> int:
-        return (i * 2) + 2
-
-    def _parent(self, i: int) -> int:
-        return int((i - 1) / 2)
-
-    def _swap(self, i: int, j: int) -> None:
-        temp = self._list[i]
-        self._list[i] = self._list[j]
-        self._list[j] = temp
-
+class MaxHeap(HeapBase):
     def insert(self, value):
         self._list.append(value)
         self._last += 1
@@ -62,36 +42,4 @@ class MaxHeap:
             right = self._right(i)
 
         return max_val
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

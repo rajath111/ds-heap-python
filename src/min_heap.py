@@ -1,29 +1,12 @@
 from typing import Any
+from src.heap_base import HeapBase
 
-class MinHeap:
+class MinHeap(HeapBase):
     '''
         So the value of any node will be less than their children.
     '''
 
-    def __init__(self) -> None:
-        self._list = []
-        self._last = -1
-
-    def _parent(self, i: int) -> int:
-        return int((i - 1) / 2)
-
-    def _left(self, i: int) -> int:
-        return (i * 2) + 1
-
-    def _right(self, i: int) -> int:
-        return (i * 2) + 2 
-
-    def _swap(self, i, j) -> None:
-        temp = self._list[i]
-        self._list[i] = self._list[j]
-        self._list[j] = temp
-
-    def insert(self, value) -> None:
+    def insert(self, value: Any) -> None:
         #  Insert at the last location + 1
         self._list.append(value)
         self._last += 1
@@ -66,26 +49,3 @@ class MinHeap:
             right = self._right(i)
 
         return result
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
